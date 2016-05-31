@@ -1,0 +1,106 @@
+.resources {
+  background-color: #fff;
+  border-radius: 6px;
+  margin: 0 auto;
+  min-height: 350px;
+  padding: 12px 40px;
+  position: relative;
+}
+.resources__content {
+  font-size: 15px;
+  text-align: justify;
+  width: 100%;
+}
+.resources__content-description {
+  font-weight: 300;
+}
+.resources__content-description.diff {
+  font-weight: 500;
+  margin: 45px 0 0;
+}
+.resources__content-description ul {
+  margin: 0 0 20px;
+  padding: 0;
+}
+.resources__content-description ul.diff {
+  margin: 0;
+}
+.resources__content-description ul li {
+  margin: 0 0 0 40px;
+  text-align: justify;
+}
+.resources__content-description ul li ul {
+  margin: 0;
+  padding: 0;
+}
+.resources__content-figure {
+  margin: 15px auto 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.resources__content-figure img {
+  max-width: 100%;
+}
+.resources__content-label {
+  margin: 5px 0 0;
+  text-align: center;
+}
+.resources__content-line {
+  border-top: 1px solid #b4b4b4;
+  margin: 60px 15px 0 15px;
+}
+.resources__content-line.diff {
+  margin: 3px 15px 0 15px;
+}
+.resources__content-right {
+  text-align: right;
+}
+.resources__content-section {
+  padding: 0 0 30px;
+}
+.resources__content-terms {
+  text-align: center;
+}
+.resources__content-title {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.resources__footer {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 25px 0 0;
+  text-align: center;
+}
+.resources__footer a {
+  background-color: #106cc8 !important;
+  color: #fff !important;
+  display: block;
+  font-weight: 700;
+  margin: 10px auto 15px auto;
+  max-width: 250px;
+  padding: 0 15px;
+}
+.resources__header {
+  color: #5a5a5a;
+  margin: 0 auto;
+  max-width: 550px;
+  padding: 50px 0 40px;
+  text-align: center;
+}
+.resources__header-author {
+  font-size: 16px;
+  font-weight: 300;
+}
+.resources__header-department {
+  font-size: 14px;
+  font-weight: 500;
+}
+.resources__header-thesis {
+  font-size: 18px;
+  font-weight: 400;
+}
+.resources__header-title {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+}

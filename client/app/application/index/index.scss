@@ -1,0 +1,112 @@
+.application-index {
+  position: relative;
+}
+.application-index__newsletter {
+  background-color: #e6f4ff;
+}
+.application-index__newsletter .application__container {
+  padding: 75px 25px;
+  @media (max-width: 1024px) {
+    padding: 50px 25px;
+  }
+  @media (max-width: 599px) {
+    padding: 30px 25px;
+  }
+}
+.application-index__newsletter-container {
+  background-color: #fff;
+  border: 1px solid #dde5ed;
+  border-radius: 8px;
+  margin: 15px auto;
+}
+.application-index__newsletter-bottom {
+  padding: 40px 35px;
+}
+.application-index__newsletter-copyright {
+  color: #1f8ceb;
+  padding: 5px 0 0;
+}
+.application-index__newsletter-copyright h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  padding: 3px 0;
+}
+.application-index__newsletter-copyright p {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+}
+.application-index__newsletter-description {
+  line-height: 1.4;
+  text-align: justify;
+}
+.application-index__newsletter-error {
+  clear: left;
+  color: #dd2c00;
+  order: 4;
+  overflow: hidden;
+  position: relative;
+}
+.application-index__newsletter-error div {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+  opacity: 1;
+  overflow: hidden;
+  padding: 10px 0 0;
+  transition: all .3s cubic-bezier(.55,0,.55,.2);
+}
+.application-index__newsletter-footer {
+  color: #8da2b5;
+  font-size: 13px;
+  font-weight: 300;
+  padding: 20px 0 10px;
+  text-align: center;
+}
+.application-index__newsletter-form {
+  text-align: center;
+}
+.application-index__newsletter-form button {
+  margin: 0;
+  padding: 0 12px;
+  position: relative;
+  top: -1px;
+}
+.application-index__newsletter-form input {
+  background-color: #fafbfc;
+  border: 1px solid #dde5ed;
+  border-radius: 3px 0 0 3px;
+  color: #8da2b5;
+  height: 28px;
+  margin: 0;
+  min-width: 250px;
+  outline: none;
+  padding: 3px 8px;
+  position: relative;
+  right: -5px;
+  width: 50%;
+}
+.application-index__newsletter-photo {
+  text-align: center;
+}
+.application-index__newsletter-photo figure {
+  background-color: #8da2b5;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.application-index__newsletter-title {
+  color: #e04e50;
+  font-size: 40px;
+  font-weight: 300;
+  padding: 35px 0 40px;
+  text-align: center;
+}
+.application-index__newsletter-top {
+  border-bottom: 1px solid #dde5ed;
+  padding: 25px 35px 30px;
+}
+.application-index__newsletter-wrapper {
+  position: relative;
+}

@@ -1,0 +1,67 @@
+.application {}
+.application md-card {
+  padding: 20px 15px;
+  text-align: justify;
+}
+.application md-card button {
+  padding: 0 12px;
+}
+.application md-card md-card-actions {
+  margin: 25px 8px 10px;
+}
+.application md-card md-input-container .md-input[disabled], .application md-card [disabled] md-input-container .md-input {
+  color: #111111;
+}
+.application__container {
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 30px 25px;
+  @media (max-width: 599px) {
+    padding: 30px 15px;
+  }
+}
+.application__pane-container {
+  background: url(../../assets/images/application_index/pane.svg) bottom right no-repeat;
+  background-size: contain;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 0 30px;
+}
+.application__pane-container .md-button .md-ripple-container {
+  border-radius: 20px;
+}
+.application__pane-container button {
+  border-radius: 20px;
+  margin: 0;
+  padding: 0 20px;
+}
+.application__pane-container h1 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 600;
+}
+.application__pane-container p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+}
+.application__pane-principal {
+  background-image: linear-gradient(180deg, #245978, #1f698e);
+  height: 500px;
+}
+.application__pane-secondary {
+  background-image: linear-gradient(180deg, #245978, #1f698e);
+  height: 200px;
+  @media (max-width: 1024px) {
+    height: 100px;
+  }
+  @media (max-width: 599px) {
+    height: 75px;
+  }
+}
+.application__pane-secondary menu-test {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}

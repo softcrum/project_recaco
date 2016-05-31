@@ -1,0 +1,46 @@
+.menu-test {
+  height: 60px;
+}
+.menu-test ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.menu-test ul li {
+  background-color: #fff;
+  border-radius: 0 0 30% 30%;
+  display: inline-block;
+  height: 50px;
+  list-style: none;
+  margin: 0 10px 0 0;
+  position: relative;
+  width: 50px;
+}
+.menu-test ul li:last-child {
+  margin: 0;
+}
+.menu-test ul li.active {
+  background-color: #cd5c5c;
+}
+.menu-test ul li.active i {
+  color: #fff;
+}
+.menu-test ul li i {
+  font-size: 30px;
+  left: 50%;
+  margin: -35% 0 0 -23%;
+  position: absolute;
+  top: 50%;
+}
+.menu-test ul li i.ion-aperture, .menu-test ul li i.ion-social-snapchat-outline {
+  left: 47%;
+}
+.menu-test ul li i.ion-ios-compose-outline {
+  left: 55%;
+}
+.menu-test ul li i.ion-ios-person-outline {
+  left: 54%;
+}
+.menu-test ul li i.ion-ios-speedometer-outline {
+  left: 48%;
+}

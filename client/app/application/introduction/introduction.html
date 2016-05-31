@@ -1,0 +1,128 @@
+<section class="application application-introduction">
+  <div class="application__pane-secondary">
+    <menu-test></menu-test>
+  </div>
+  <div class="application__container" layout="column" ng-cloak>
+    <md-card>
+      <md-content layout-padding>
+        <div class="resources">
+          <div class="resources__header">
+            <div class="resources__header-title">
+              {{ 'resources.informed_consent' | translate }}
+            </div>
+            <div class="resources__header-thesis">
+              {{ 'resources.thesis' | translate }}
+            </div>
+            <div class="resources__header-author">
+              {{ 'resources.author_1' | translate }}
+            </div>
+            <div class="resources__header-author">
+              {{ 'resources.author_2' | translate }}
+            </div>
+            <div class="resources__header-department">
+              {{ 'resources.department' | translate }}
+            </div>
+          </div>
+          <div class="resources__content">
+            <div class="resources__content-section">
+              <div class="resources__content-description">
+                <b>{{ 'resources_informed_consent.description_1' | translate }}</b><br /><br />
+                <b>{{ 'resources_informed_consent.description_2' | translate }}</b>
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'resources_informed_consent.question_1_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'resources_informed_consent.question_1_description_1' | translate }}<br /><br />
+                {{ 'resources_informed_consent.question_1_description_2' | translate }}
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'resources_informed_consent.question_2_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'resources_informed_consent.question_2_description_1' | translate }}<br /><br />
+                {{ 'resources_informed_consent.question_2_description_2' | translate }}<br /><br />
+                {{ 'resources_informed_consent.question_2_description_3' | translate }}
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'resources_informed_consent.question_3_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'resources_informed_consent.question_3_description_1' | translate }}
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'resources_informed_consent.question_4_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'resources_informed_consent.question_4_description_1' | translate }}
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'resources_informed_consent.question_5_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'resources_informed_consent.question_5_description_1' | translate }}
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'resources_informed_consent.question_6_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'resources_informed_consent.question_6_description_1' | translate }}
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'resources_informed_consent.question_7_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'resources_informed_consent.question_7_description_1' | translate }}<br /><br />
+                {{ 'resources_informed_consent.question_7_description_2' | translate }}
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'resources_informed_consent.question_8_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'resources_informed_consent.question_8_description_1' | translate }}
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'resources_informed_consent.question_9_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'resources_informed_consent.question_9_description_1' | translate }}<br /><br />
+                {{ 'resources_informed_consent.question_9_description_2' | translate }}
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-description">
+                {{ 'resources_informed_consent.footer' | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </md-content>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button class="md-raised" ng-click="$ctrl.abortTest()">
+          {{ 'application.abort' | translate }}
+        </md-button>
+        <md-button class="md-raised md-primary" ng-click="$ctrl.executeApp()">
+          {{ 'application.next' | translate }}
+        </md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</section>

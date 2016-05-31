@@ -1,0 +1,66 @@
+<section class="application application-index">
+  <div class="application__pane-principal">
+    <div class="application__pane-container" layout="row" layout-align="start center">
+      <div flex="100" flex-gt-xs="75" flex-gt-sm="50">
+        <h1>
+          {{ 'application_index.panel_title' | translate }}
+        </h1>
+        <p>
+          {{ 'application_index.panel_description' | translate }}
+        </p>
+        <md-button class="md-warn md-raised md-hue-2" ng-click="$ctrl.executeApp()">
+          {{ 'application_index.init_test' | translate }}
+        </md-button>
+      </div>
+    </div>
+  </div>
+  <div class="application__container" layout="row" layout-align="start center">
+    <div flex="100" flex-gt-sm="50">Hola 1</div>
+    <div flex="100" flex-gt-sm="50">Hola 2</div>
+  </div>
+  <div class="application-index__newsletter">
+    <div class="application__container" layout="row" layout-align="start center">
+      <div class="application-index__newsletter-container" flex="100" flex-gt-sm="80" flex-offset="0" flex-offset-gt-sm="10">
+        <div class="application-index__newsletter-top">
+          <div class="application-index__newsletter-title">
+            {{ 'application_index.newsletter_title' | translate }}
+          </div>
+          <div class="application-index__newsletter-form">
+            <form name="newsletterForm" ng-cloak>
+              <input name="email" ng-model="newsletter.email" required ng-pattern="/^.+@.+\..+$/" autocomplete="off">
+              <md-button class="md-raised md-primary" ng-click="$ctrl.addNewsletter()" ng-disabled="newsletterForm.$invalid">
+                {{ 'application_index.newsletter_register' | translate }}
+              </md-button>
+              <div class="application-index__newsletter-error" ng-messages="newsletterForm.email.$error" ng-show="newsletterForm.email.$dirty">
+                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                  {{ 'application_index.newsletter_error' | translate }}
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="application-index__newsletter-footer">
+            {{ 'application_index.newsletter_description' | translate }}
+          </div>
+        </div>
+        <div class="application-index__newsletter-bottom" layout="column" layout-gt-sm="row" layout-align="start center">
+          <div class="application-index__newsletter-photo" flex="100" flex-gt-sm="20">
+            <figure></figure>
+          </div>
+          <div class="application-index__newsletter-wrapper" flex="100" flex-gt-sm="80">
+            <div class="application-index__newsletter-description">
+              <b>"</b>{{ 'application_index.newsletter_details' | translate }}<b>"</b>
+            </div>
+            <div class="application-index__newsletter-copyright">
+              <h4>
+                Daniel Valenzuela Suárez
+              </h4>
+              <p>
+                CEO Softcrum SpA
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
