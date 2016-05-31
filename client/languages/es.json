@@ -21,7 +21,7 @@
 
 
 
-
+  "application_index.exit_test": "Volver al menú principal",
   "application_index.init_test": "Iniciar evaluación",
   "application_index.panel_description": "Estudio sobre análisis y medición de coherencia cardíaca como factor en la comprensión lectora",
   "application_index.panel_title": "Evaluación sobre técnicas de enseñanza-aprendizaje",
@@ -37,6 +37,7 @@
   "application_profile.create_account": "Creación de una cuenta para el experimento",
   "application_profile.create_account_description": "Los datos solicitados en este formulario, corresponden a características de su persona y, en ningún caso, corresponden a datos que pudiesen en algún caso identificarlo como persona.",
 
+  "header.softcrum": "Un proyecto de Softcrum SpA",
 
 
 

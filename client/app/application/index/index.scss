@@ -31,15 +31,24 @@
   font-weight: 600;
   margin: 0;
   padding: 3px 0;
+  @media (max-width: 599px) {
+    font-size: 18px;
+  }
 }
 .application-index__newsletter-copyright p {
   font-size: 14px;
   font-weight: 300;
   margin: 0;
+  @media (max-width: 599px) {
+    font-size: 13px;
+  }
 }
 .application-index__newsletter-description {
   line-height: 1.4;
   text-align: justify;
+  @media (max-width: 599px) {
+    font-size: 14px;
+  }
 }
 .application-index__newsletter-error {
   clear: left;
@@ -102,6 +111,9 @@
   font-weight: 300;
   padding: 35px 0 40px;
   text-align: center;
+  @media (max-width: 599px) {
+    font-size: 28px;
+  }
 }
 .application-index__newsletter-top {
   border-bottom: 1px solid #dde5ed;
