@@ -1,3 +1,7 @@
+### [0.0.3] - (31-05-2016)
+## Added
+- Se incorpora nuevo componente para el pie de página del proyecto.
+
 ### [0.0.2] - (31-05-2016)
 ## Added
 - Se incorpora nuevo componente para la cabecera del proyecto.

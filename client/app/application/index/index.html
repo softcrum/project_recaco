@@ -34,11 +34,6 @@
               <md-button class="md-raised md-primary" ng-click="$ctrl.addNewsletter()" ng-disabled="newsletterForm.$invalid">
                 {{ 'application_index.newsletter_register' | translate }}
               </md-button>
-              <div class="application-index__newsletter-error" ng-messages="newsletterForm.email.$error" ng-show="newsletterForm.email.$dirty">
-                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                  {{ 'application_index.newsletter_error' | translate }}
-                </div>
-              </div>
             </form>
           </div>
           <div class="application-index__newsletter-footer">

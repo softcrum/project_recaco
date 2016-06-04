@@ -1,1 +1,132 @@
-<div>this is the footer directive</div>
+<section class="footer" layout="column">
+  <div class="layout-max-width">
+    <div layout="row" layout-wrap>
+      <div class="footer__menu" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <p class="footer__menu-logo">
+          <a ui-sref="HomeIndex">
+            <i class="ion-ios-pulse-strong"></i>
+            <span>Recaco</span>
+          </a>
+        </p>
+        <p class="footer__menu-developed">
+          {{ 'footer.developed' | translate }}
+          <a href="http://www.softcrum.com" target="_blank">Softcrum SpA</a>
+        </p>
+      </div>
+      <div class="footer__menu" flex="100" flex-gt-xs="50" flex-gt-sm="25" hide-xs>
+        <div class="footer__menu-title">
+          {{ 'footer.about' | translate }}
+        </div>
+        <ul>
+          <li>
+            <a ui-sref="AboutIndex">
+              {{ 'footer.company' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="AboutTeam">
+              {{ 'footer.team' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="AboutCulture">
+              {{ 'footer.culture' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="AboutPhilosophy">
+              {{ 'footer.philosophy' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="AboutPress">
+              {{ 'footer.press' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="AboutJobs">
+              {{ 'footer.jobs' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="AboutVersion">
+              {{ 'footer.version' | translate }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__menu" flex="100" flex-gt-xs="50" flex-gt-sm="25" hide-xs>
+        <div class="footer__menu-title">
+          {{ 'footer.resources' | translate }}
+        </div>
+        <ul>
+          <li>
+            <a ui-sref="HelpIndex">
+              {{ 'footer.help' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="HelpFaqs">
+              {{ 'footer.faqs' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="LegalIndex">
+              {{ 'footer.legal' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="LegalTerms">
+              {{ 'footer.terms' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="LegalPrivacy">
+              {{ 'footer.privacy' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="LegalCookies">
+              {{ 'footer.cookies' | translate }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__menu" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <div class="footer__menu-title">
+          {{ 'footer.contact_us' | translate }}
+        </div>
+        <ul>
+          <li>
+            <a ui-sref="AboutContactUs">
+              {{ 'footer.contact_agent' | translate }}
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            {{ 'footer.address' | translate }}:
+            <a class="footer__menu-detail" href="{{ app.company.address.point }}" target="_blank">
+              {{ app.company.address.format }}
+            </a>
+          </li>
+          <li>
+            {{ 'footer.phone' | translate }}:
+            <a class="footer__menu-detail" href="tel://{{ app.company.phone.call }}">
+              {{ app.company.phone.format }}
+            </a>
+          </li>
+          <li>
+            {{ 'footer.email' | translate }}:
+            <a class="footer__menu-detail" ui-sref="AboutContactUs">{{ app.company.email.contact }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copy">
+    <div class="layout-max-width">
+      © Recaco {{ date }} - {{ 'footer.all_rights_reserved' | translate }}
+    </div>
+  </div>
+</section>

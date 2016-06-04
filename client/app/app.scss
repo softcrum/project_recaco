@@ -22,9 +22,29 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 
 //
+html {
+  overflow: hidden;
+}
 body {
   font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  overflow-y: auto;
   user-select: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+footer {
+  position: relative;
+  top: 53px;
+}
+header {
+  height: 53px;
+  position: relative;
+}
+[ui-view] {
+  position: relative;
+  top: 53px;
 }
 
 // FontFamily
@@ -132,6 +152,8 @@ body {
 @import 'application/start/start';
 @import 'application/test/test';
 @import 'application/thanks/thanks';
+@import 'home/home';
+@import 'home/index/index';
 @import 'main/main';
 @import 'resources/resources';
 @import '../components/footer/footer';

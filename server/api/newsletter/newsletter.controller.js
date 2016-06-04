@@ -100,3 +100,13 @@ export function destroy(req, res) {
     .then(removeEntity(res))
     .catch(handleError(res));
 }
+
+
+
+
+export function findEmail(req, res) {
+  return Newsletter.find({ 'email': req.params.email }).exec()
+    .then(handleEntityNotFound(res))
+    .then(respondWithResult(res))
+    .catch(handleError(res));
+}
