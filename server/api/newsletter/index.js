@@ -1,18 +1,15 @@
 'use strict';
 
-var express = require('express');
-var controller = require('./newsletter.controller');
+const express = require('express');
+const controller = require('./newsletter.controller');
+const router = express.Router();
 
-var router = express.Router();
-
+router.delete('/:id', controller.destroy);
 router.get('/', controller.index);
 router.get('/:id', controller.show);
+router.get('/search_email/:email', controller.findEmail);
+router.patch('/:id', controller.update);
 router.post('/', controller.create);
 router.put('/:id', controller.update);
-router.patch('/:id', controller.update);
-router.delete('/:id', controller.destroy);
-
-
-router.get('/search_email/:email', controller.findEmail);
 
 module.exports = router;

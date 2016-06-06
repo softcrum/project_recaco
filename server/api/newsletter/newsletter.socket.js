@@ -1,25 +1,20 @@
-/**
- * Broadcast updates to client when the model changes
- */
-
 'use strict';
 
 import NewsletterEvents from './newsletter.events';
 
-// Model events to emit
-var events = ['save', 'remove'];
+const events = [
+  'remove',
+  'save'
+];
 
 export function register(socket) {
-  // Bind model events to socket events
-  for (var i = 0, eventsLength = events.length; i < eventsLength; i++) {
-    var event = events[i];
-    var listener = createListener('newsletter:' + event, socket);
-
+  for (let i = 0, eventsLength = events.length; i < eventsLength; i++) {
+    const event = events[i];
+    const listener = createListener('newsletter:' + event, socket);
     NewsletterEvents.on(event, listener);
     socket.on('disconnect', removeListener(event, listener));
   }
 }
-
 
 function createListener(event, socket) {
   return function(doc) {

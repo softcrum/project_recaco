@@ -20,37 +20,22 @@
         <ul>
           <li>
             <a ui-sref="AboutIndex">
-              {{ 'footer.company' | translate }}
+              {{ 'footer.menu_company' | translate }}
             </a>
           </li>
           <li>
             <a ui-sref="AboutTeam">
-              {{ 'footer.team' | translate }}
+              {{ 'footer.menu_team' | translate }}
             </a>
           </li>
           <li>
-            <a ui-sref="AboutCulture">
-              {{ 'footer.culture' | translate }}
-            </a>
-          </li>
-          <li>
-            <a ui-sref="AboutPhilosophy">
-              {{ 'footer.philosophy' | translate }}
-            </a>
-          </li>
-          <li>
-            <a ui-sref="AboutPress">
-              {{ 'footer.press' | translate }}
-            </a>
-          </li>
-          <li>
-            <a ui-sref="AboutJobs">
-              {{ 'footer.jobs' | translate }}
+            <a ui-sref="AboutPublish">
+              {{ 'footer.menu_publish' | translate }}
             </a>
           </li>
           <li>
             <a ui-sref="AboutVersion">
-              {{ 'footer.version' | translate }}
+              {{ 'footer.menu_version' | translate }}
             </a>
           </li>
         </ul>
@@ -61,33 +46,23 @@
         </div>
         <ul>
           <li>
-            <a ui-sref="HelpIndex">
-              {{ 'footer.help' | translate }}
-            </a>
-          </li>
-          <li>
-            <a ui-sref="HelpFaqs">
-              {{ 'footer.faqs' | translate }}
-            </a>
-          </li>
-          <li>
-            <a ui-sref="LegalIndex">
-              {{ 'footer.legal' | translate }}
-            </a>
-          </li>
-          <li>
             <a ui-sref="LegalTerms">
-              {{ 'footer.terms' | translate }}
+              {{ 'footer.menu_terms' | translate }}
             </a>
           </li>
           <li>
             <a ui-sref="LegalPrivacy">
-              {{ 'footer.privacy' | translate }}
+              {{ 'footer.menu_privacy' | translate }}
             </a>
           </li>
           <li>
             <a ui-sref="LegalCookies">
-              {{ 'footer.cookies' | translate }}
+              {{ 'footer.menu_cookies' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="LegalFaqs">
+              {{ 'footer.menu_faqs' | translate }}
             </a>
           </li>
         </ul>
@@ -98,7 +73,7 @@
         </div>
         <ul>
           <li>
-            <a ui-sref="AboutContactUs">
+            <a ui-sref="ContactIndex">
               {{ 'footer.contact_agent' | translate }}
             </a>
           </li>
@@ -106,19 +81,19 @@
         <ul>
           <li>
             {{ 'footer.address' | translate }}:
-            <a class="footer__menu-detail" href="{{ app.company.address.point }}" target="_blank">
-              {{ app.company.address.format }}
+            <a class="footer__menu-detail" href="{{ address.point }}" target="_blank">
+              {{ address.format }}
             </a>
           </li>
           <li>
             {{ 'footer.phone' | translate }}:
-            <a class="footer__menu-detail" href="tel://{{ app.company.phone.call }}">
-              {{ app.company.phone.format }}
+            <a class="footer__menu-detail" href="tel://{{ phone.call }}">
+              {{ phone.format }}
             </a>
           </li>
           <li>
             {{ 'footer.email' | translate }}:
-            <a class="footer__menu-detail" ui-sref="AboutContactUs">{{ app.company.email.contact }}</a>
+            <a class="footer__menu-detail" ui-sref="ContactIndex">{{ email }}</a>
           </li>
         </ul>
       </div>
