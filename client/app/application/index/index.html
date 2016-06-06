@@ -11,6 +11,9 @@
         <md-button class="md-warn md-raised md-hue-2" ng-click="$ctrl.executeApp()">
           {{ 'application_index.init_test' | translate }}
         </md-button>
+        <md-button class="md-raised" ui-sref="HomeIndex">
+          {{ 'application_index.exit_test' | translate }}
+        </md-button>
       </div>
     </div>
   </div>
@@ -28,14 +31,9 @@
           <div class="application-index__newsletter-form">
             <form name="newsletterForm" ng-cloak>
               <input name="email" ng-model="newsletter.email" required ng-pattern="/^.+@.+\..+$/" autocomplete="off">
-              <md-button class="md-raised md-primary" ng-click="$ctrl.addNewsletter()" ng-disabled="newsletterForm.$invalid">
+              <md-button class="md-raised md-primary md-hue-2" ng-click="$ctrl.addNewsletter()" ng-disabled="newsletterForm.$invalid">
                 {{ 'application_index.newsletter_register' | translate }}
               </md-button>
-              <div class="application-index__newsletter-error" ng-messages="newsletterForm.email.$error" ng-show="newsletterForm.email.$dirty">
-                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                  {{ 'application_index.newsletter_error' | translate }}
-                </div>
-              </div>
             </form>
           </div>
           <div class="application-index__newsletter-footer">
@@ -48,7 +46,7 @@
           </div>
           <div class="application-index__newsletter-wrapper" flex="100" flex-gt-sm="80">
             <div class="application-index__newsletter-description">
-              <b>"</b>{{ 'application_index.newsletter_details' | translate }}<b>"</b>
+              "{{ 'application_index.newsletter_details' | translate }}"
             </div>
             <div class="application-index__newsletter-copyright">
               <h4>

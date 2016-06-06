@@ -1,0 +1,44 @@
+.header {
+  background-color: #1565c0;
+  border-bottom: 3px solid #90a4ae;
+  box-sizing: border-box;
+  height: 53px;
+  left: 0;
+  padding: 0 30px;
+  position: absolute;
+  right: 0;
+  top: 0 !important;
+}
+.header__logo {
+  color: #eceff1;
+  cursor: pointer;
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 0 0 45px;
+  position: relative;
+  width: 200px;
+}
+.header__logo i {
+ color: #fff;
+ font-size: 32px;
+ left: 5px;
+ position: absolute;
+}
+.header__logo-by {
+  font-size: 12px;
+  left: 46px;
+  position: absolute;
+  top: 11px;
+}
+.header__logo-name {
+  position: relative;
+  top: -6px;
+}
+
+header {
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1000;
+}

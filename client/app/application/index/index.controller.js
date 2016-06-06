@@ -14,26 +14,41 @@
       this.verifyInitApp();
     }
     addNewsletter() {
-      this.http.post('/api/newsletter', {
-        email: this.scope.newsletter.email,
-        notification: true
-      }).then(() => {
-        this.sweet.show({
-          showConfirmButton: false,
-          text: this.translate('application.email_text'),
-          timer: 7500,
-          title: this.translate('application.email_title'),
-          type: 'success'
+      this.http.get('/api/newsletter/search_email/' + this.scope.newsletter.email)
+        .then((response) => {
+          if (response.data.length === 0) {
+            this.http.post('/api/newsletter', {
+              email: this.scope.newsletter.email,
+              notification: true
+            }).then(() => {
+              this.sweet.show({
+                showConfirmButton: false,
+                text: this.translate('application.email_text'),
+                timer: 7500,
+                title: this.translate('application.email_title'),
+                type: 'success'
+              });
+              this.scope.newsletter.email = '';
+            }).catch(() => {
+              this.sweet.show({
+                showConfirmButton: false,
+                text: this.translate('application.email_error_text'),
+                timer: 4500,
+                title: this.translate('application.email_error_title'),
+                type: 'warning'
+              });
+            });
+          } else {
+            this.sweet.show({
+              showConfirmButton: false,
+              text: this.translate('application.email_error_text'),
+              timer: 4500,
+              title: this.translate('application.email_error_title'),
+              type: 'warning'
+            });
+          }
         });
-      }).catch(() => {
-        this.sweet.show({
-          showConfirmButton: false,
-          text: this.translate('application.email_error_text'),
-          timer: 4500,
-          title: this.translate('application.email_error_title'),
-          type: 'warning'
-        });
-      });
+
     }
     executeApp() {
       this.http.post('/api/test', {}).then((response) => {
