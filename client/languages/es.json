@@ -18,29 +18,35 @@
   "application.not_init_title": "Alerta",
   "application.save_text": "Los datos ingresados han sido almacenados correctamente.",
   "application.save_title": "Datos guardados",
-
-
-
   "application_index.exit_test": "Volver al menú principal",
   "application_index.init_test": "Iniciar evaluación",
   "application_index.panel_description": "Estudio sobre análisis y medición de coherencia cardíaca como factor en la comprensión lectora",
   "application_index.panel_title": "Evaluación sobre técnicas de enseñanza-aprendizaje",
   "application_index.newsletter_description": "Su correo electrónico ingresará a nuestra base de datos solo para fines informativos acerca del proyecto.",
   "application_index.newsletter_details": "El estudio de la computación afectiva nos ayuda a mejorar en el desarrollo de sistemas y dispositivos para que puedan reconocer, interpretar, procesar y simular afectos humanos. Este campo interdisciplinario abarca la informática, la psicología y las ciencias cognitivas.",
-  "application_index.newsletter_error": "No se ha ingresado un correo electrónico o su formato se encuentra incorrecto.",
   "application_index.newsletter_register": "Suscribirme",
   "application_index.newsletter_title": "Suscríbase a nuestro boletín de noticias",
-
-
-
   "application_profile.identification": "Número de identificación",
   "application_profile.create_account": "Creación de una cuenta para el experimento",
   "application_profile.create_account_description": "Los datos solicitados en este formulario, corresponden a características de su persona y, en ningún caso, corresponden a datos que pudiesen en algún caso identificarlo como persona.",
-
+  "footer.about": "Acerca del proyecto",
+  "footer.address": "Dirección",
+  "footer.all_rights_reserved": "Todos los derechos reservados.",
+  "footer.contact_agent": "Contáctese con nosotros",
+  "footer.contact_us": "Contacto",
+  "footer.developed": "Desarrollado por",
+  "footer.email": "Correo electrónico",
+  "footer.menu_company": "Acerca de nosotros",
+  "footer.menu_cookies": "Uso de cookies",
+  "footer.menu_faqs": "Preguntas frecuentes",
+  "footer.menu_privacy": "Política de privacidad",
+  "footer.menu_publish": "Artículo de publicación",
+  "footer.menu_team": "Equipo y colaboradores",
+  "footer.menu_terms": "Términos de uso",
+  "footer.menu_version": "Versión de la aplicación",
+  "footer.phone": "Teléfono de contacto",
+  "footer.resources": "Recursos",
   "header.softcrum": "Un proyecto de Softcrum SpA",
-
-
-
   "resources.author_1": "Estudiante de Magíster: Daniel Valenzuela Suárez",
   "resources.author_2": "Investigador Responsable: Edmundo Leiva Lobos",
   "resources.department": "Departamento de Ingeniería Informática - Universidad de Santiago de Chile",

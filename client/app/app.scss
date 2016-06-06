@@ -22,9 +22,29 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 
 //
+html {
+  overflow: hidden;
+}
 body {
   font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  overflow-y: auto;
   user-select: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+footer {
+  position: relative;
+  top: 53px;
+}
+header {
+  height: 53px;
+  position: relative;
+}
+[ui-view] {
+  position: relative;
+  top: 53px;
 }
 
 // FontFamily
@@ -115,6 +135,11 @@ body {
 
 // Component styles are injected through grunt
 /* inject:scss */
+@import 'about/about';
+@import 'about/index/index';
+@import 'about/publish/publish';
+@import 'about/team/team';
+@import 'about/version/version';
 @import 'admin/admin';
 @import 'application/application';
 @import 'application/consent/consent';
@@ -132,6 +157,15 @@ body {
 @import 'application/start/start';
 @import 'application/test/test';
 @import 'application/thanks/thanks';
+@import 'contact/contact';
+@import 'contact/index/index';
+@import 'home/home';
+@import 'home/index/index';
+@import 'legal/cookies/cookies';
+@import 'legal/faqs/faqs';
+@import 'legal/legal';
+@import 'legal/privacy/privacy';
+@import 'legal/terms/terms';
 @import 'main/main';
 @import 'resources/resources';
 @import '../components/footer/footer';

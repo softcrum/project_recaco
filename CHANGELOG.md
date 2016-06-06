@@ -1,3 +1,8 @@
+### [0.1.0] - (04-06-2016)
+## Added
+- Se incorpora nuevo componente para el pie de página del proyecto.
+- Se incorporan las rutas de la aplicación para su navegación.
+
 ### [0.0.2] - (31-05-2016)
 ## Added
 - Se incorpora nuevo componente para la cabecera del proyecto.

@@ -1,6 +1,107 @@
-<div class="container">
-  <p>Angular Fullstack v3.7.4 |
-    <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
-    <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a>
-  </p>
-</div>
+<section class="footer" layout="column">
+  <div class="layout-max-width">
+    <div layout="row" layout-wrap>
+      <div class="footer__menu" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <p class="footer__menu-logo">
+          <a ui-sref="HomeIndex">
+            <i class="ion-ios-pulse-strong"></i>
+            <span>Recaco</span>
+          </a>
+        </p>
+        <p class="footer__menu-developed">
+          {{ 'footer.developed' | translate }}
+          <a href="http://www.softcrum.com" target="_blank">Softcrum SpA</a>
+        </p>
+      </div>
+      <div class="footer__menu" flex="100" flex-gt-xs="50" flex-gt-sm="25" hide-xs>
+        <div class="footer__menu-title">
+          {{ 'footer.about' | translate }}
+        </div>
+        <ul>
+          <li>
+            <a ui-sref="AboutIndex">
+              {{ 'footer.menu_company' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="AboutTeam">
+              {{ 'footer.menu_team' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="AboutPublish">
+              {{ 'footer.menu_publish' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="AboutVersion">
+              {{ 'footer.menu_version' | translate }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__menu" flex="100" flex-gt-xs="50" flex-gt-sm="25" hide-xs>
+        <div class="footer__menu-title">
+          {{ 'footer.resources' | translate }}
+        </div>
+        <ul>
+          <li>
+            <a ui-sref="LegalTerms">
+              {{ 'footer.menu_terms' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="LegalPrivacy">
+              {{ 'footer.menu_privacy' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="LegalCookies">
+              {{ 'footer.menu_cookies' | translate }}
+            </a>
+          </li>
+          <li>
+            <a ui-sref="LegalFaqs">
+              {{ 'footer.menu_faqs' | translate }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__menu" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+        <div class="footer__menu-title">
+          {{ 'footer.contact_us' | translate }}
+        </div>
+        <ul>
+          <li>
+            <a ui-sref="ContactIndex">
+              {{ 'footer.contact_agent' | translate }}
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            {{ 'footer.address' | translate }}:
+            <a class="footer__menu-detail" href="{{ address.point }}" target="_blank">
+              {{ address.format }}
+            </a>
+          </li>
+          <li>
+            {{ 'footer.phone' | translate }}:
+            <a class="footer__menu-detail" href="tel://{{ phone.call }}">
+              {{ phone.format }}
+            </a>
+          </li>
+          <li>
+            {{ 'footer.email' | translate }}:
+            <a class="footer__menu-detail" ui-sref="ContactIndex">{{ email }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copy">
+    <div class="layout-max-width">
+      © Recaco {{ date }} - {{ 'footer.all_rights_reserved' | translate }}
+    </div>
+  </div>
+</section>

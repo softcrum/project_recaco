@@ -1,25 +1,18 @@
-/**
- * Newsletter model events
- */
-
 'use strict';
 
 import {EventEmitter} from 'events';
 import Newsletter from './newsletter.model';
-var NewsletterEvents = new EventEmitter();
+const NewsletterEvents = new EventEmitter();
 
-// Set max event listeners (0 == unlimited)
 NewsletterEvents.setMaxListeners(0);
 
-// Model events
 var events = {
-  'save': 'save',
-  'remove': 'remove'
+  'remove': 'remove',
+  'save': 'save'
 };
 
-// Register the event emitter to the model events
-for (var e in events) {
-  var event = events[e];
+for (const e in events) {
+  const event = events[e];
   Newsletter.schema.post(e, emitEvent(event));
 }
 
