@@ -1,3 +1,7 @@
+### [0.1.1] - (06-06-2016)
+## Fixed
+- Se solucionar un error cuando se cambia la URL, posicionando el scroll en la parte superior de la UI.
+
 ### [0.1.0] - (04-06-2016)
 ## Added
 - Se incorpora nuevo componente para el pie de página del proyecto.
