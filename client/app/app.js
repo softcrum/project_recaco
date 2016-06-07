@@ -29,20 +29,20 @@ angular.module('projectRecacoApp',
   .controller('AppCtrl', function ($scope, $translate, $cookies) {
     $scope.appChangeLanguage = function (key) {
       $translate.use(key);
-      $cookies.put('SC_LR-language', key);
+      $cookies.put('SC_PR-language', key);
     };
   })
-  .run(function($cookies, $rootScope, $state, $translate) {
+  .run(function($cookies, $document, $rootScope, $state, $translate) {
     $rootScope.$on('$stateChangeStart', function(event, toState) {
-      if (toState.security && !$cookies.get('SC_LR-user')) {
+      if (toState.security && !$cookies.get('SC_PR-user')) {
         $state.transitionTo('AuthenticateLogin');
         event.preventDefault();
-      } else if (toState.name === 'AuthenticateLogin' && $cookies.get('SC_LR-user')) {
+      } else if (toState.name === 'AuthenticateLogin' && $cookies.get('SC_PR-user')) {
         $state.transitionTo('DashboardIndex');
         event.preventDefault();
       }
     });
-    var defaultLanguage = $cookies.get('SC_LR-language');
+    var defaultLanguage = $cookies.get('SC_PR-language');
     if (defaultLanguage) {
       $translate.use(defaultLanguage);
     } else {
