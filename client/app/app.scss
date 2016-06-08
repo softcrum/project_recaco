@@ -36,7 +36,6 @@ a {
 }
 footer {
   position: relative;
-  top: 53px;
 }
 header {
   height: 53px;
@@ -44,7 +43,7 @@ header {
 }
 [ui-view] {
   position: relative;
-  top: 53px;
+  padding: 53px 0 0;
 }
 
 // FontFamily
