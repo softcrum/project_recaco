@@ -107,3 +107,61 @@
 .application-index__newsletter-wrapper {
   position: relative;
 }
+.application-index__section {
+  padding: 15px 0;
+}
+.application-index__section [flex]:nth-child(2) {
+  @media (max-width: 959px) {
+    padding: 10px 15px 0;
+  }
+}
+.application-index__section h3 {
+  color: #324e7c;
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0 auto 3px;
+  @media (max-width: 599px) {
+    font-size: 30px;
+  }
+}
+.application-index__section h4 {
+  color: #000;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0 0 15px 45px;
+  position: relative;
+  @media (max-width: 599px) {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  &:before {
+    border-radius: 5px;
+    content: "";
+    background-color: #e17a52;
+    height: 5px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 30px;
+  }
+}
+.application-index__section img {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 15px;
+  width: 100%;
+}
+.application-index__section p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+  @media (max-width: 599px) {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
