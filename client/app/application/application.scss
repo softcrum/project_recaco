@@ -1,4 +1,7 @@
 .application {}
+.application [flex] {
+  width: 100%;
+}
 .application md-card {
   padding: 20px 15px;
   text-align: justify;

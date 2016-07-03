@@ -17,9 +17,84 @@
       </div>
     </div>
   </div>
-  <div class="application__container" layout="row" layout-align="start center">
-    <div flex="100" flex-gt-sm="50">Hola 1</div>
-    <div flex="100" flex-gt-sm="50">Hola 2</div>
+  <div class="application-index__section">
+    <div class="application__container" layout="column" layout-gt-sm="row" layout-align="start center">
+      <div flex="100" flex-gt-sm="45" class="pos-center">
+        <img ng-src="assets/images/application_index/section_principal.jpg" />
+      </div>
+      <div flex="100" flex-gt-sm="50" flex-offset="0" flex-offset-gt-sm="5">
+        <h3>
+          {{ 'application_index.section_principal_title' | translate }}
+        </h3>
+        <h4>
+          {{ 'application_index.section_principal_subtitle' | translate }}
+        </h4>
+        <p>
+          {{ 'application_index.section_principal_description' | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="application-index__section testimonial">
+    <div layout="row" layout-align="center center">
+      <div flex="100" class="application-index__section-description">
+        {{ 'application_index.testimonial' | translate }}
+      </div>
+    </div>
+  </div>
+  <div class="application-index__section">
+    <div class="application__container" layout="column" layout-gt-sm="row" layout-align="start center">
+      <div flex="100" flex-gt-sm="25" class="pos-center">
+        <img ng-src="assets/images/application_index/section_analytics.png" />
+      </div>
+      <div flex="100" flex-gt-sm="65" flex-offset="0" flex-offset-gt-sm="10">
+        <h3>
+          {{ 'application_index.section_analytics_title' | translate }}
+        </h3>
+        <h4>
+          {{ 'application_index.section_analytics_subtitle' | translate }}
+        </h4>
+        <p>
+          {{ 'application_index.section_analytics_description' | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="application-index__section odd">
+    <div class="application__container" layout="column" layout-gt-sm="row" layout-align="start center">
+      <div flex="100" flex-gt-sm="65" flex-order="2" flex-order-gt-sm="1">
+        <h3>
+          {{ 'application_index.section_send_title' | translate }}
+        </h3>
+        <h4>
+          {{ 'application_index.section_send_subtitle' | translate }}
+        </h4>
+        <p>
+          {{ 'application_index.section_send_description' | translate }}
+        </p>
+      </div>
+      <div flex="100" flex-gt-sm="25" flex-offset="0" flex-offset-gt-sm="10" flex-order="1" flex-order-gt-sm="2" class="pos-center">
+        <img ng-src="assets/images/application_index/section_send.png" />
+      </div>
+    </div>
+  </div>
+  <div class="application-index__section">
+    <div class="application__container" layout="column" layout-gt-sm="row" layout-align="start center">
+      <div flex="100" flex-gt-sm="25" class="pos-center">
+        <img ng-src="assets/images/application_index/section_security.png" />
+      </div>
+      <div flex="100" flex-gt-sm="65" flex-offset="0" flex-offset-gt-sm="10">
+        <h3>
+          {{ 'application_index.section_security_title' | translate }}
+        </h3>
+        <h4>
+          {{ 'application_index.section_security_subtitle' | translate }}
+        </h4>
+        <p>
+          {{ 'application_index.section_security_description' | translate }}
+        </p>
+      </div>
+    </div>
   </div>
   <div class="application-index__newsletter">
     <div class="application__container" layout="row" layout-align="start center">

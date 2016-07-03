@@ -27,13 +27,20 @@
 }
 .header__logo-by {
   font-size: 12px;
+  height: 15px;
   left: 46px;
+  line-height: 15px;
   position: absolute;
-  top: 11px;
+  top: 28px;
+  width: 204px;
 }
 .header__logo-name {
-  position: relative;
-  top: -6px;
+  height: 20px;
+  left: 46px;
+  line-height: 20px;
+  position: absolute;
+  top: 8px;
+  width: 204px;
 }
 
 header {
