@@ -72,7 +72,7 @@
   border: 1px solid #dde5ed;
   border-radius: 3px 0 0 3px;
   color: #8da2b5;
-  height: 28px;
+  height: 34px;
   margin: 0;
   min-width: 250px;
   outline: none;
@@ -83,11 +83,15 @@
 }
 .application-index__newsletter-photo {
   text-align: center;
+  @media (max-width: 959px) {
+    padding: 0 0 25px;
+  }
 }
 .application-index__newsletter-photo figure {
   background-color: #8da2b5;
   border-radius: 50%;
   height: 100px;
+  margin: 0 auto;
   width: 100px;
 }
 .application-index__newsletter-title {
@@ -121,7 +125,7 @@
   font-weight: 700;
   margin: 0 auto 3px;
   @media (max-width: 599px) {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 .application-index__section h4 {
@@ -153,15 +157,44 @@
   margin: 0 auto;
   max-width: 500px;
   padding: 15px;
-  width: 100%;
+  width: auto;
+  @media (max-width: 599px) {
+    max-width: 50%;
+  }
 }
 .application-index__section p {
   color: #666;
   font-size: 16px;
   line-height: 1.8;
   margin: 0;
+  text-align: justify;
   @media (max-width: 599px) {
     font-size: 14px;
     line-height: 1.2;
+  }
+}
+.application-index__section.odd {
+  background-color: #f7f7f7;
+}
+.application-index__section.testimonial {
+  background: url("../../../assets/images/application_index/background_testimonial.jpg") no-repeat top center #fff;
+  height: 600px;
+  @media (max-width: 599px) {
+    height: 500px;
+  }
+}
+.application-index__section.testimonial [layout="row"] {
+  height: 100%;
+}
+.application-index__section-description {
+  color: #fff;
+  font-size: 30px;
+  line-height: 48px;
+  max-width: 950px !important;
+  padding: 0 25px 30px;
+  text-align: center;
+  @media (max-width: 599px) {
+    font-size: 24px;
+    line-height: 32px;
   }
 }
