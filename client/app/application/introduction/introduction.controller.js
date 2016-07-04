@@ -14,7 +14,7 @@
       this.verifyInitApp();
     }
     abortTest() {
-      const thisP = this;
+      const self = this;
       this.sweet.show({
         closeOnConfirm: false,
         cancelButtonText: this.translate('application.abort_cancel'),
@@ -25,18 +25,19 @@
         text: this.translate('application.abort_text'),
         type: 'warning'
       }, function () {
-        thisP.http.delete('/api/test/' + thisP.cookies.get('SC_PR-test_id')).then(() => {
-          thisP.cookies.remove('SC_PR-test_id');
-          thisP.cookies.remove('SC_PR-test_step');
-          thisP.sweet.show({
-            showConfirmButton: false,
-            text: thisP.translate('application.abort_text_success'),
-            timer: 7500,
-            title: thisP.translate('application.abort_title_success'),
-            type: 'success'
+        self.http.delete('/api/test/' + self.cookies.get('SC_PR-test_id'))
+          .then(() => {
+            self.cookies.remove('SC_PR-test_id');
+            self.cookies.remove('SC_PR-test_step');
+            self.sweet.show({
+              showConfirmButton: false,
+              text: self.translate('application.abort_text_success'),
+              timer: 7500,
+              title: self.translate('application.abort_title_success'),
+              type: 'success'
+            });
+            self.state.go('ApplicationIndex');
           });
-          thisP.state.go('ApplicationIndex');
-        });
       });
     }
     executeApp() {
@@ -49,17 +50,18 @@
             introduction: true
           }
         }
-      }).then(() => {
-        this.cookies.put('SC_PR-test_step', parseInt(this.cookies.get('SC_PR-test_step')) + 1);
-        this.sweet.show({
-          showConfirmButton: false,
-          text: this.translate('application.save_text'),
-          timer: 3000,
-          title: this.translate('application.save_title'),
-          type: 'success'
+      })
+        .then(() => {
+          this.cookies.put('SC_PR-test_step', parseInt(this.cookies.get('SC_PR-test_step')) + 1);
+          this.sweet.show({
+            showConfirmButton: false,
+            text: this.translate('application.save_text'),
+            timer: 3000,
+            title: this.translate('application.save_title'),
+            type: 'success'
+          });
+          this.state.go(this.listTest.getList()[parseInt(this.cookies.get('SC_PR-test_step')) - 1].url);
         });
-        this.state.go(this.listTest.getList()[parseInt(this.cookies.get('SC_PR-test_step')) - 1].url);
-      });
     }
     verifyInitApp() {
       if (this.cookies.get('SC_PR-test_id')) {

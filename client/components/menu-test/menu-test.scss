@@ -22,8 +22,12 @@
 .menu-test ul li.active {
   background-color: #cd5c5c;
 }
-.menu-test ul li.active i {
+.menu-test ul li.active i,
+.menu-test ul li.actual i {
   color: #fff;
+}
+.menu-test ul li.actual {
+  background-color: #009688;
 }
 .menu-test ul li i {
   font-size: 30px;
