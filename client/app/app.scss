@@ -30,13 +30,15 @@ body {
   overflow-y: auto;
   user-select: none;
 }
+* {
+  box-sizing: border-box;
+}
 a {
   color: #fff;
   text-decoration: none;
 }
 footer {
   position: relative;
-  top: 53px;
 }
 header {
   height: 53px;
@@ -45,6 +47,15 @@ header {
 [ui-view] {
   padding: 53px 0 0;
   position: relative;
+}
+.pos-center {
+  text-align: center;
+}
+.pos-left {
+  text-align: left;
+}
+.pos-right {
+  text-align: right;
 }
 
 // FontFamily
