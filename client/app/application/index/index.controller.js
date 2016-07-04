@@ -53,18 +53,32 @@
 
     }
     executeApp() {
-      this.http.post('/api/test', {}).then((response) => {
-        this.cookies.put('SC_PR-test_id', response.data._id);
-        this.cookies.put('SC_PR-test_step', 2);
-        this.sweet.show({
-          showConfirmButton: false,
-          text: this.translate('application.save_text'),
-          timer: 3000,
-          title: this.translate('application.save_title'),
-          type: 'success'
+      this.http.post('/api/test', {
+        user: {
+          internal_key: this.uuid()
+        }
+      })
+        .then((response) => {
+          this.cookies.put('SC_PR-test_id', response.data._id);
+          this.cookies.put('SC_PR-test_step', 2);
+          this.sweet.show({
+            showConfirmButton: false,
+            text: this.translate('application.save_text'),
+            timer: 3000,
+            title: this.translate('application.save_title'),
+            type: 'success'
+          });
+          this.state.go('ApplicationIntroduction');
         });
-        this.state.go('ApplicationIntroduction');
-      });
+    }
+    uuid() {
+      function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+          .toString(16)
+          .substring(1);
+      }
+      return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+        s4() + '-' + s4() + s4() + s4();
     }
     verifyInitApp() {
       if (this.cookies.get('SC_PR-test_id')) {
