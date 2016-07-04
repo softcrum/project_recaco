@@ -1,4 +1,3 @@
-.application {}
 .application [flex] {
   width: 100%;
 }
@@ -12,7 +11,8 @@
 .application md-card md-card-actions {
   margin: 25px 8px 10px;
 }
-.application md-card md-input-container .md-input[disabled], .application md-card [disabled] md-input-container .md-input {
+.application md-card md-input-container .md-input[disabled],
+.application md-card [disabled] md-input-container .md-input {
   color: #111111;
 }
 .application__container {
@@ -37,7 +37,9 @@
 .application__pane-container .md-button .md-ripple-container {
   border-radius: 20px;
 }
-.application__pane-container a, .application__pane-container button, .application__pane-container span {
+.application__pane-container a,
+.application__pane-container button,
+.application__pane-container span {
   border-radius: 20px;
   display: inline-flex;
   margin: 0;
@@ -72,15 +74,10 @@
 .application__pane-secondary {
   background-image: linear-gradient(180deg, #245978, #1f698e);
   height: 200px;
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     height: 100px;
   }
   @media (max-width: 599px) {
     height: 75px;
-  }
-}
-.application__pane-secondary menu-test {
-  @media (max-width: 1024px) {
-    display: none;
   }
 }
