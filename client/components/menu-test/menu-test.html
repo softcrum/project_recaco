@@ -1,6 +1,6 @@
 <section class="menu-test">
   <ul>
-    <li ng-repeat="(key, item) in list" ng-class="key + 1 < step ? 'active' : ''">
+    <li ng-repeat="(key, item) in list" ng-class="key + 1 < step ? 'active' : (key + 1 === step ? 'actual' : '')">
       <i class="ion-{{item.icon}}"></i>
     </li>
   </ul>
