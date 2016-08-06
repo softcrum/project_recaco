@@ -2,131 +2,130 @@
   <div class="application__pane-secondary">
     <menu-test></menu-test>
   </div>
-
-
   <div class="application__container" layout="column" ng-cloak>
-    <md-card>
-      <md-card-title>
-        <md-card-title-text>
-          <span class="md-headline">
-            {{ 'application_profile.create_account' | translate }}
-          </span>
-          <span class="md-subhead">
-            {{ 'application_profile.create_account_description' | translate }}
-          </span>
-        </md-card-title-text>
-      </md-card-title>
-      <md-content layout-padding>
-        <form name="projectForm">
-          <md-input-container class="md-block" flex-gt-xs>
-            <label>
-              {{ 'application_profile.identification' | translate }}
-            </label>
-            <input ng-model="test.id" disabled>
-          </md-input-container>
-
-
-
+    <form name="projectForm" autocomplete="off">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">
+              {{ 'application_profile.create_account' | translate }}
+            </span>
+            <span class="md-subhead">
+              {{ 'application_profile.create_account_description' | translate }}
+            </span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-content layout-padding>
           <div layout-gt-sm="row">
-            <md-input-container class="md-block" flex-gt-sm>
-              <label>Description</label>
-              <input md-maxlength="30" required name="description" ng-model="project.description">
-              <div ng-messages="projectForm.description.$error">
-                <div ng-message="required">This is required.</div>
-                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+            <md-input-container class="md-block" flex-gt-xs>
+              <label>
+                {{ 'application_profile.identification' | translate }}
+              </label>
+              <input ng-model="test.user.internal_key" disabled>
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex="60" flex-gt-xs>
+              <label>
+                {{ 'application_profile.email' | translate }}
+              </label>
+              <input ng-model="test.user.email" name="email" ng-pattern="/^.+@.+\..+$/" required>
+              <div ng-messages="projectForm.email.$error" multiple md-auto-hide="false">
+                <div ng-message="required">
+                  {{ 'global.required' | translate }}
+                </div>
+                <div ng-message="pattern">
+                  {{ 'global.pattern_email' | translate }}
+                </div>
               </div>
             </md-input-container>
-
-
-
-            <md-input-container class="md-block" flex-gt-sm>
-              <label>Description</label>
-              <md-select ng-model="test.gender" required>
-                <md-option ng-repeat="gender in genders" value="{{gender.value}}">
-                  {{gender.text}}
+            <md-input-container class="md-block" flex="25" flex-gt-xs>
+              <label>
+                {{ 'application_profile.gender' | translate }}
+              </label>
+              <md-select ng-model="test.user.gender" name="gender" required>
+                <md-option ng-repeat="gender in genders" value="{{gender.id}}">
+                  {{ gender.text }}
                 </md-option>
               </md-select>
-              <div ng-messages="projectForm.gender.$error">
-                <div ng-message="required">This is required poh.</div>
+              <div ng-messages="projectForm.gender.$error" ng-if="projectForm.gender.$pristine">
+                <div ng-message="required">
+                  {{ 'global.required' | translate }}
+                </div>
+              </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex="15" flex-gt-xs>
+              <label>
+                {{ 'application_profile.age' | translate }}
+              </label>
+              <input ng-model="test.user.age" name="age" ng-pattern="/^[0-9]*$/" required>
+              <div ng-messages="projectForm.age.$error" multiple md-auto-hide="false">
+                <div ng-message="required">
+                  {{ 'global.required' | translate }}
+                </div>
+                <div ng-message="pattern">
+                  {{ 'global.pattern_number' | translate }}
+                </div>
               </div>
             </md-input-container>
           </div>
-
-
-
-
-          <md-input-container class="md-block">
-            <label>Description</label>
-            <input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">
-            <div ng-messages="projectForm.description.$error">
-              <div ng-message="required">This is required.</div>
-              <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
-            </div>
-          </md-input-container>
-
-
-          <md-input-container class="md-block" flex-gt-xs>
-            <label>Company (Disabled)</label>
-            <input ng-model="test.company" disabled>
-          </md-input-container>
-          <md-datepicker ng-model="test.submissionDate" md-placeholder="Enter date"></md-datepicker>
-
-
-
-          <md-input-container class="md-block">
-            <label>Client Name</label>
-            <input required name="clientName" ng-model="project.clientName">
-            <div ng-messages="projectForm.clientName.$error">
-              <div ng-message="required">This is required.</div>
-            </div>
-          </md-input-container>
-          <md-input-container class="md-block">
-            <label>Client Email</label>
-            <input required type="email" name="clientEmail" ng-model="project.clientEmail"
-                   minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-            <div ng-messages="projectForm.clientEmail.$error" role="alert">
-              <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                Your email must be between 10 and 100 characters long and look like an e-mail address.
+          <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex-gt-xs>
+              <label>
+                {{ 'application_profile.university_name' | translate }}
+              </label>
+              <input ng-model="test.user.university.name" name="universityName" required>
+              <div ng-messages="projectForm.universityName.$error" ng-if="projectForm.universityName.$pristine">
+                <div ng-message="required">
+                  {{ 'global.required' | translate }}
+                </div>
               </div>
-            </div>
-          </md-input-container>
-          <md-input-container class="md-block">
-            <label>Hourly Rate (USD)</label>
-            <input required type="number" step="any" name="rate" ng-model="project.rate" min="800"
-                   max="4999" ng-pattern="/^1234$/" />
-            <div ng-messages="projectForm.rate.$error" multiple md-auto-hide="false">
-              <div ng-message="required">
-                You've got to charge something! You can't just <b>give away</b> a Missile Defense
-                System.
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex="70" flex-gt-xs>
+              <label>
+                {{ 'application_profile.university_career' | translate }}
+              </label>
+              <input ng-model="test.user.university.career" name="universityCareer" required>
+              <div ng-messages="projectForm.universityCareer.$error" ng-if="projectForm.universityCareer.$pristine">
+                <div ng-message="required">
+                  {{ 'global.required' | translate }}
+                </div>
               </div>
-              <div ng-message="min">
-                You should charge at least $800 an hour. This job is a big deal... if you mess up,
-                everyone dies!
+            </md-input-container>
+            <md-input-container class="md-block" flex="30" flex-gt-xs>
+              <label>
+                {{ 'application_profile.university_level' | translate }}
+              </label>
+              <input ng-model="test.user.university.level" name="universityLevel" ng-pattern="/^[0-9]*$/" required>
+              <div ng-messages="projectForm.universityLevel.$error" multiple md-auto-hide="false">
+                <div ng-message="required">
+                  {{ 'global.required' | translate }}
+                </div>
+                <div ng-message="pattern">
+                  {{ 'global.pattern_number' | translate }}
+                </div>
               </div>
-              <div ng-message="pattern">
-                You should charge exactly $1,234.
-              </div>
-              <div ng-message="max">
-                {{projectForm.rate.$viewValue | currency:"$":0}} an hour? That's a little ridiculous. I
-                doubt even Bill Clinton could afford that.
-              </div>
-            </div>
-          </md-input-container>
-          <p style="font-size:.8em; width: 100%; text-align: center;">
-            Make sure to include <a href="https://docs.angularjs.org/api/ngMessages" target="_blank">ngMessages</a> module when using ng-message markup.
-          </p>
-        </form>
-      </md-content>
-
-
-      <md-card-actions layout="row" layout-align="end center">
-        <md-button class="md-raised" ng-click="$ctrl.abortTest()">
-          {{ 'application.abort' | translate }}
-        </md-button>
-        <md-button class="md-raised md-primary" ng-click="$ctrl.executeApp()">
-          {{ 'application.next' | translate }}
-        </md-button>
-      </md-card-actions>
-    </md-card>
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex="70" flex-gt-xs>
+              <md-checkbox ng-model="test.user.send_results" class="md-primary">
+                {{ 'application_profile.send_results' | translate }}
+              </md-checkbox>
+            </md-input-container>
+          </div>
+        </md-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-raised" ng-click="$ctrl.abortTest()">
+            {{ 'application.abort' | translate }}
+          </md-button>
+          <md-button class="md-raised md-primary" ng-click="$ctrl.executeApp()" ng-disabled="projectForm.$invalid">
+            {{ 'application.next' | translate }}
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </form>
   </div>
 </section>

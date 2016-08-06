@@ -1,1 +1,3 @@
-.application-profile {}
+.application-profile  md-input-container [ng-message] {
+  padding: 5px 3px;
+}
