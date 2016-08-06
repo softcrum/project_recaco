@@ -71,7 +71,7 @@ let TestSchema = new mongoose.Schema({
     }
   },
   user: {
-    birthday: { type: Date },
+    age: { type: Number },
     email: { type: String },
     gender: { type: String },
     internal_key: { type: String, index: true },

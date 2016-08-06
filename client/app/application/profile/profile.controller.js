@@ -3,6 +3,7 @@
 (function() {
   class ApplicationProfileComponent {
     constructor($cookies, $filter, $http, $scope, $state, listTest, socket, sweet) {
+      const translate = $filter('translate');
       this.cookies = $cookies;
       this.http = $http;
       this.listTest = listTest;
@@ -11,6 +12,17 @@
       this.state = $state;
       this.sweet = sweet;
       this.translate = $filter('translate');
+      this.http.get('/api/test/' + this.cookies.get('SC_PR-test_id'))
+        .then((response) => {
+          this.scope.test = response.data;
+        });
+      this.scope.genders = [{
+        id: 'male',
+        text: translate('global.male')
+      }, {
+        id: 'female',
+        text: translate('global.female')
+      }];
       this.verifyInitApp();
     }
     abortTest() {
@@ -48,6 +60,17 @@
         test: {
           authorization: {
             introduction: true
+          }
+        },
+        user: {
+          age: this.scope.test.user.age,
+          email: this.scope.test.user.email.toLowerCase(),
+          gender: this.scope.test.user.gender,
+          send_results: this.scope.test.user.send_results,
+          university: {
+            career: this.scope.test.user.university.career.toUpperCase(),
+            level: this.scope.test.user.university.level,
+            name: this.scope.test.user.university.name.toUpperCase()
           }
         }
       })

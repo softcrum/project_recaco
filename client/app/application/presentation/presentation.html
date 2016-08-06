@@ -1,3 +1,160 @@
-<section class="application-presentation">
-  Sección Application-Presentation
+<section class="application application-presentation">
+  <div class="application__pane-secondary">
+    <menu-test></menu-test>
+  </div>
+  <div class="application__container" layout="column" ng-cloak>
+    <md-card>
+      <md-content layout-padding>
+        <div class="resources">
+          <div class="resources__header">
+            <div class="resources__header-title">
+              {{ 'resources.presentation' | translate }}
+            </div>
+            <div class="resources__header-thesis">
+              {{ 'resources.thesis' | translate }}
+            </div>
+            <div class="resources__header-author">
+              {{ 'resources.author_1' | translate }}
+            </div>
+            <div class="resources__header-author">
+              {{ 'resources.author_2' | translate }}
+            </div>
+            <div class="resources__header-department">
+              {{ 'resources.department' | translate }}
+            </div>
+          </div>
+          <div class="resources__content">
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'application_presentation.question_1_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'application_presentation.question_1_description_1' | translate }}:
+                <ul>
+                  <li>
+                    {{ 'application_presentation.question_1_description_2' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_1_description_3' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_1_description_4' | translate }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'application_presentation.question_2_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'application_presentation.question_2_description_1' | translate }}
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'application_presentation.question_3_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'application_presentation.question_3_description_1' | translate }}<br />
+                {{ 'application_presentation.question_3_description_2' | translate }}:
+                <ul>
+                  <li>
+                    {{ 'application_presentation.question_3_description_3' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_3_description_4' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_3_description_5' | translate }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'application_presentation.question_4_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'application_presentation.question_4_description_1' | translate }}:<br /><br />
+                <img ng-src="assets/images/application_presentation/step_1.png" />
+                <ul>
+                  <li>
+                    {{ 'application_presentation.question_4_description_2' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_4_description_3' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_4_description_4' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_4_description_5' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_4_description_6' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_4_description_7' | translate }}
+                  </li>
+                </ul>
+                <img ng-src="assets/images/application_presentation/step_2.png" />
+                <ul>
+                  <li>
+                    {{ 'application_presentation.question_4_description_8' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_4_description_9' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_4_description_10' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_4_description_11' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_4_description_12' | translate }}
+                  </li>
+                </ul>
+                <img ng-src="assets/images/application_presentation/step_3.png" />
+                <ul>
+                  <li>
+                    {{ 'application_presentation.question_4_description_13' | translate }}
+                  </li>
+                  <li>
+                    {{ 'application_presentation.question_4_description_14' | translate }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'application_presentation.question_5_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'application_presentation.question_5_description_1' | translate }}<br />
+                {{ 'application_presentation.question_5_description_2' | translate }}
+              </div>
+            </div>
+            <div class="resources__content-section">
+              <div class="resources__content-title">
+                {{ 'application_presentation.question_6_title' | translate }}
+              </div>
+              <div class="resources__content-description">
+                {{ 'application_presentation.question_6_description_1' | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </md-content>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button class="md-raised" ng-click="$ctrl.abortTest()">
+          {{ 'application.abort' | translate }}
+        </md-button>
+        <md-button class="md-raised md-primary" ng-click="$ctrl.executeApp()">
+          {{ 'application.next' | translate }}
+        </md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
 </section>
