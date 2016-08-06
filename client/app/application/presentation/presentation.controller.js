@@ -47,7 +47,7 @@
           },
           test: {
             authorization: {
-              introduction: true
+              presentation: true
             }
           }
         })

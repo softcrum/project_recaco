@@ -13,6 +13,7 @@ let TestSchema = new mongoose.Schema({
     authorization: {
       consent: { type: Boolean, default: false },
       introduction: { type: Boolean, default: false },
+      presentation: { type: Boolean, default: false },
       test: { type: Boolean, default: false },
       training: { type: Boolean, default: false }
     },
