@@ -4,7 +4,7 @@ angular.module('projectRecacoApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('ApplicationIndex', {
-        url: '/application',
+        url: '/',
         template: '<application-index></application-index>'
       });
   });
